@@ -12,7 +12,7 @@ const Counter = lazy(() => import('./routes/Counter'));
 function App() {
   
   return (
-    <Router>
+    <Router basename="/react-redux-scss">
       <HeaderContainer/>
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
