@@ -5,7 +5,7 @@
   "private": true,
   "author": "joomation <joomation@gmail.com> (https://joomation.com)",
   "license": "MIT",
-  "homepage": "https://joomation.github.io/react-redux-scss",
+  "homepage": "https://joomation/github.io/react-redux-scss/",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
