@@ -1,0 +1,42 @@
+{
+  "name": "react-redux-sass",
+  "version": "0.0.5",
+  "description": "Get started with React, Redux, React-Router, Sass",
+  "private": true,
+  "author": "joomation <joomation@gmail.com> (https://joomation.com)",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "c": "react-scripts eject",
+    "deploy": "react-scripts build && node server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
