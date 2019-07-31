@@ -9,6 +9,8 @@ https://joomation.github.io/react-redux-scss/
 | [react]          | [![react-status]][react-package] |  |
 | [react-dom]                | [![react-dom-status]][react-dom-package] |  |
 
+| [vue-router]          | [![vue-router-status]][vue-router-package] | Single-page application routing |
+
 <div style="border:1px solid #dfdfdf">
   <img width="100%" src="https://github.com/joomation/react-redux-scss/blob/master/preview.gif"/>
 </div>
