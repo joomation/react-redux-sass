@@ -1,39 +1,29 @@
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
+import { useActions, useError } from "../lib/hooks";
+import * as actions from "../store/modules/counter";
+import { increment, decrement } from "../store/modules/counter";
+import CounterButton from "../components/CounterButton";
 
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types'
-import { increment, decrement } from '../store/modules/counter';
-import CounterButton from '../components/CounterButton';
-class TestContainer extends Component {
-  static propTypes = {
-    number: PropTypes.number
-  }
-  handleIncrement = () => {
-    this.props.increment();
+function CounterContainer() {
+  const { number } = useSelector((state) => ({
+    number: state.counter.number,
+  }));
+  const { increment, decrement } = useActions(actions);
+  const handleIncrement = () => {
+    increment();
   };
-  handleDecrement = () => {
-    this.props.decrement();
+  const handleDecrement = () => {
+    decrement();
   };
-  render() {
-    const { number } = this.props;
-    return (
-      <div className="counter-wrap">
-        <div className="num">{number}</div>
-        <CounterButton text="increse" onClick={this.handleIncrement}/>
-        <CounterButton text="decrease" onClick={this.handleDecrement}/>
-        
-      </div>
-    );
-  }
+  return (
+    <div className="counter-wrap">
+      <div className="num">{number}</div>
+      <CounterButton text="increse" onClick={handleIncrement} />
+      <CounterButton text="decrease" onClick={handleDecrement} />
+    </div>
+  );
 }
-const mapStateToProps = ({ counter }) => ({
-  number: counter.number,
-});
 
-
-const mapDispatchToProps = { increment, decrement };
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TestContainer);
+export default CounterContainer;
